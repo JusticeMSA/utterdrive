@@ -1,0 +1,83 @@
+@import '../../theme/colors.scss';
+@import '../../theme/sections.scss';
+
+.story{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    color: $primary-text;
+    font-size: 16px;
+    .left{
+        p{
+            margin-bottom: 15px;
+        }
+        p:nth-child(3){
+            color: $primary-color;
+        }
+        .skills{
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 50px;
+            .left,.right{
+                ul{
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+    .right{
+        display: flex;
+        img{
+            width: 50%;
+            display: inline-block;
+        }
+    }
+}
+
+@media screen and (min-width: 650px){
+    .story{
+        flex-direction: row;
+        .left{
+            flex: 1;
+            p{
+                margin-bottom: 15px;
+            }
+            p:nth-child(3){
+                color: $primary-color;
+            }
+            .skills{
+                width: 50%;
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 50px;
+                .left,.right{
+                    ul{
+                        color: $secondary-color;
+                    }
+                }
+            }
+        }
+        .right{
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            img{
+                width: 200px;
+                display: inline-block;
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 769px){
+   .story{
+       font-size: 18px;
+       .right{
+           img{
+               width: 300px;
+           }
+       }
+   } 
+}

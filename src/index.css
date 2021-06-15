@@ -6,8 +6,33 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+body, *{
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+@font-face{
+  font-family: montserat-regular;
+  src: url('./fonts/MONTSERRAT-REGULAR.TTF');
+}
+@font-face{
+  font-family: montserat-light;
+  src: url('./fonts/MONTSERRAT-LIGHT.TTF');
+}
+@font-face{
+  font-family: montserat-semibold;
+  src: url('./fonts/MONTSERRAT-SEMIBOLD.TTF');
+}
+@font-face{
+  font-family: montserat-bold;
+  src: url('./fonts/MONTSERRAT-BOLD.TTF');
 }

@@ -1,0 +1,142 @@
+@import '../../theme/colors.scss';
+.hero{
+    display: flex;
+    align-items: center;
+    padding: 100px 0 50px 0;
+    .container{
+        display: flex;
+        flex-direction: column;
+        p{
+            color: $primary-text;
+            animation-name: heroSlideInInit, heroSlideIn;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
+            animation-delay: 0s, 0.75s ;
+        }
+        .hi{
+            color: $primary-color;
+            font-family: 'montserat-light', sans-serif;
+            font-size: 16px;
+            animation-name: heroSlideInInit, heroSlideIn;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
+            animation-delay: 0s, 0s;
+        }
+        h1,h2{
+            color: #fff;
+            font-size: 45px;
+            font-family: 'montserat-bold';
+            opacity: 1;
+            margin: 0;
+            animation-name: heroSlideInInit, heroSlideIn;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
+            animation-delay: 0s, 0.25s;
+            span{
+                color: $secondary-color;
+            }
+        }
+        h2{
+            color: $primary-text;
+            margin-bottom: 25px;
+            animation-name: heroSlideInInit, heroSlideIn;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
+            animation-delay: 0s, 0.5s ;
+        }
+        a{
+            font-family: 'montserat-regular';
+            color: $primary-color;
+            border: solid 1px $primary-color;
+            border-radius: 3px;
+            width: fit-content;
+            padding: 5px 15px;
+            transition: 0.5s;
+            font-size: 14px;
+            margin-top: 20px;
+            animation-name: heroSlideInInit, heroSlideIn;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
+            animation-delay: 0s, 1s ;
+
+            &:hover{
+                color: $secondary-color;
+                border-color: $secondary-color
+            }
+        }
+    }
+}
+//Links Slide In
+@keyframes heroSlideInInit{
+    from{opacity: 0;}
+    to{opacity: 0;}
+}
+@keyframes heroSlideIn{
+    from{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media screen and (min-width:375px) and (max-width:424px){
+    .hero{
+        .container{
+            h1,h2{
+                font-size: 50px;
+            }
+            p{
+                width: 90%;
+            }
+        }
+    }
+}
+@media screen and (min-width:425px) and (max-width:767px){
+    .hero{
+        .container{
+            h1,h2{
+                font-size: 55px;
+            }
+            p{
+                font-size: 18px;
+            }
+        }
+    }
+}
+@media screen and (min-width:768px) and (max-width:1023px){
+    .hero{
+        height: 80vh;
+        .container{
+            h1,h2{
+                font-size: 65px;
+            }
+            p{
+                width: 50%;
+            }
+        }
+    }
+}
+@media screen and (min-width:1024px){
+    .hero{
+        height: 100vh;
+        .container{
+            h1,h2{
+                font-size: 75px;
+                width: 80%;
+            }
+            .hi{
+                font-size: 20px;
+            }
+            p{
+                width: 50%;
+                font-size: 20px;
+            }
+            a{
+                font-size: 16px;
+            }
+        }
+    }
+}

@@ -1,0 +1,72 @@
+@import '../../theme/colors.scss';
+
+.socials{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 50px;
+    right: 1%;
+    
+    a{
+        background: #fff;
+        border-radius: 50%;
+        width: 26px;
+        height: 26px;
+        margin-bottom: 15px;
+    }
+    div{
+        background: $secondary-color;
+        width: 2px;
+        height: 100px;
+    }
+
+}
+.email{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 50px;
+    right: 1%;
+    a{
+        color: #fff;
+        text-orientation: upright;
+        writing-mode: vertical-rl;
+        letter-spacing: -5px;
+        margin-bottom: 15px;
+
+    }
+    div{
+        background: $primary-color;
+        width: 2px;
+        height: 100px;
+    }
+}
+.email,.socials{
+    animation-name: stickySlideInInit, stickySlideIn;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s, 3s ;
+}
+//Links Slide In
+@keyframes stickySlideInInit{
+    from{opacity: 0;}
+    to{opacity: 0;}
+}
+@keyframes stickySlideIn{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .email,.socials{
+        display: flex;
+    }
+}
